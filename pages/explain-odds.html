@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Five Card Slots</title>
+        <link rel="stylesheet" href="../css/modern-normalize.css">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Five Card Slots</h1>
+            <nav>
+                <ul>
+                    <li><a href="./how-to-play.html" target="_self">How to Play</a></li>
+                    <li><a href="../index.html" target="_self">Play Game</a></li>
+                    <li><a href="https://www.ncpgambling.org/help-treatment/" target="_self">Get Help</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="explainOdds">
+            <section class="probabilitiesBasic">
+                <h2>Basic Concepts</h2>
+                <p>A deck has 52 cards. You grab 5 cards. There are 2,598,960 different combinations of 5 you could
+                    grab. That's your "total."</p>
+                <p>Every hand is just: (how many of those 2,598,960 combinations look like MY hand) / 2,598,960.</p>
+                <p>To count "how many combinations," we ask: "How many ways can I pick X things from Y things?" We write
+                    that as C(Y, X).</p>
+                <p>Example: C(4,2) means "pick 2 suits from 4 suits." The answer is 6, because the
+                    pairs are: (hearts, spades) (hearts, diamonds) (hearts,clubs) (spades,diamonds) (spades,clubs)
+                    (diamonds,clubs).</p>
+                <p>That's all the math. Every hand below is just multiplying "pick X from Y" numbers.</p>
+            </section>
+            <section class="probabilitiesHands">
+                <h3>Each Hand</h3>
+                <div class="probabilityHand">
+                    <h4>ROYAL STRAIGHT FLUSH (10-J-Q-K-A, all one suit)</h4>
+                    <p>You get to pick the suit: 4 choices. The cards are fixed. No other choices.
+                    </p>
+                    <p>Combinations = 4</p>
+                    <p>Probability = 4 / 2,598,960</p>
+                </div>
+                <div class="probabilityHand">
+                    <h4>STRAIGHT FLUSH (five in a row, same suit, NOT a royal straight flush)</h4>
+                    <p>Pick where the run starts: 10 spots (2-6, ..., 10-A). Pick the suit: 4 choices. Subtract the
+                        4 royals (already counted above).</p>
+                    <p>Combinations = 10 * 4 - 4 = 36</p>
+                    <p>Probability = 36 / 2,598,960</p>
+                </div>
+                <div class="probabilityHand">
+                    <h4>FOUR OF A KIND (four of one value + one other card)</h4>
+                    <p>Pick the rank for the four: 13 choices. All 4 suits are used: 1 way (no choice). Pick the 5th
+                        card's rank: 12 choices. Pick the 5th card's suit: 4 choices.</p>
+                    <p>Combinations = 13 * 1 * 12 * 4 = 624</p>
+                    <p>Probability = 624 / 2,598,960</p>
+                </div>
+                <div class="probabilityHand">
+                    <h4>FULL HOUSE (three of one value + two of one value)</h4>
+                    <p>Pick the rank for the triple: 13 choices. Pick 3 of its 4 suits: C(4,3) = 4 ways. Pick the rank
+                        for the pair: 12 choices. Pick 2 of its 4 suits: C(4,2) = 6 ways</p>
+                    <p>Combinations = 13 * 4 * 12 * 6 = 3,744</p>
+                    <p>Probability = 3,744 / 2,598,960</p>
+                </div>
+                <div class="probabilityHand">
+                    <h4>FLUSH (five same suit, NOT a straight flush)</h4>
+                    <p>Pick 5 ranks out of 13: C(13,5) = 1,287 ways. Pick the suit: 4 choices. Subtract the 40 straight
+                        flushes (10 runs x 4 suits).</p>
+                    <p>Combinations = 1,287 * 4 - 40 = 5,108</p>
+                    <p>Probability = 5,108 / 2,598,960</p>
+                </div>
+                <div class="probabilityHand">
+                    <h4>STRAIGHT (five in a row, mixed suits, NOT a straight flush)</h4>
+                    <p>Pick where the run starts: 10 spots. Each card can be any suit: 4 * 4 * 4 * 4 * 4 = 1,024.
+                        Subtract the 40 all-same-suit ones (straight flushes).</p>
+                    <p>Combinations = 10 * 1,024 - 40 = 10,200</p>
+                    <p>Probability = 10,200 / 2,598,960</p>
+                </div>
+                <div class="probabilityHand">
+                    <h4>THREE OF A KIND (three of one value + two other different cards)</h4>
+                    <p>Pick the rank for the triple: 13 choices. Pick 3 of its 4 suits: C(4,3) = 4 ways. Pick 2 other
+                        ranks (different from each other): C(12,2) = 66 ways. Each of those 2 cards picks a suit: 4 * 4
+                        = 16 ways.</p>
+                    <p>Combinations = 13 * 4 * 66 * 16 = 54,912</p>
+                    <p>Probability = 54,912 / 2,598,960</p>
+                </div>
+                <div class="probabilityHand">
+                    <h4>TWO PAIR (two of one value + two of one value + one other card)</h4>
+                    <p>Pick the 2 ranks that will be pairs: C(13,2) = 78 ways. Pick 2 of 4 suits for the first pair:
+                        C(4,2) = 6. Pick 2 of 4 suits for the second pair: C(4,2) = 6. Pick the 5th card's rank: 11
+                        choices. Pick the 5th card's suit: 4 choices.</p>
+                    <p>Combinations = 78 * 6 * 6 * 11 * 4 = 123,552</p>
+                    <p>Probability = 123,552 / 2,598,960</p>
+                </div>
+                <div class="probabilityHand">
+                    <h4>ONE PAIR (two of one value + three other different cards)</h4>
+                    <p>Pick the pair's rank: 13 choices. Pick 2 of its 4 suits: C(4,2) = 6 ways. Pick 3 other ranks:
+                        C(12,3) = 220 ways. Each of those 3 cards picks a suit: 4 * 4 * 4 = 64 ways.</p>
+                    <p>Combinations = 13 * 6 * 220 * 64 = 1,098,240</p>
+                    <p>Probability = 1,098,240 / 2,598,960</p>
+                </div>
+                <div class="probabilityHand">
+                    <h4>HIGH CARD (no pair, no straight, no flush)</h4>
+                    <p> Pick 5 ranks that don't make a straight: C(13,5) - 10 = 1,277. Assign suits so it's NOT a flush:
+                        4^5 - 4 = 1,020.</p>
+                    <p>Combinations = 1,277 * 1,020 = 1,302,540</p>
+                    <p>Probability = 1,302,540 / 2,598,960</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                If you or someone you know needs support, confidential help is available 24/7 through the National
+                Council on Problem Gambling helpline by calling or texting <a
+                    href="tel:+18005224700">1-800-522-4700</a>.
+            </p>
+        </footer>
+
+        <script src="./js/main.js"></script>
+    </body>
+
+</html>
