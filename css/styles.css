@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+header,
+main,
+footer {
+    padding: 2% 1%;
+}
+
+header,
+footer {
+    flex-shrink: 0;
+    background: rgb(248, 12, 213);
+    color: rgb(40, 20, 50);
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        text-wrap: nowrap;
+        font-size: 1.5rem;
+    }
+
+    nav {
+        flex-grow: 1;
+
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: end;
+            gap: 0.5rem;
+            list-style: none;
+
+            li {
+                padding: 1% 2%;
+                border: 2px solid rgb(40, 20, 50);
+                border-radius: 16px;
+
+                a {
+                    color: rgb(40, 20, 50);
+                    text-decoration: none;
+                }
+            }
+
+        }
+    }
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+    background: rgb(250, 234, 15);
+}
+
+.displayMessages {
+    flex-shrink: 0;
+}
+
+.displayMessage {
+    padding: 1%;
+    text-align: center;
+    color: rgb(30, 20, 80);
+    font-weight: bold;
+}
+
+.displayMessage:first-child {
+    font-size: 3rem;
+}
+
+.displayMessage:last-child {
+    font-size: 2rem;
+}
+
+.cards {
+    padding: 1%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card {
+    flex: 0 8rem;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    height: 12rem;
+    border: 3px solid rgb(40, 20, 50);
+    border-radius: 16px;
+    background: rgb(84, 239, 234);
+    color: rgb(255, 255, 255);
+}
+
+.cardSuit,
+.cardValue {
+    margin: auto 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.counters {
+    padding: 1%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem;
+}
+
+.counter {
+    padding: 1% 2%;
+    flex: 1 calc(100% * (1 / 2) - 2%);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(40, 20, 50);
+    border-radius: 8px;
+    background: rgb(63, 138, 140);
+    color: rgb(240, 195, 255);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.counterValues {
+    font-size: 1rem;
+}
+
+.buttons {
+    padding: 1%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem;
+}
+
+.button {
+    padding: 2%;
+    flex: 1 calc(100% * (1 / 2) - 2%);
+    border: 2px solid rgb(40, 20, 50);
+    border-radius: 8px;
+    background: rgb(255, 20, 147);
+    color: rgb(57, 255, 20);
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.button:hover {
+    cursor: pointer;
+    border-width: 4px;
+}
+
+.handProbabilities {
+    padding: 1%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.handProbability {
+    padding: 1% 2%;
+    flex: 1 0 calc(100% * (1 / 2) - 2%);
+    border: 2px solid rgb(40, 20, 50);
+    border-radius: 8px;
+    background: rgb(252, 18, 73);
+    color: rgb(57, 255, 20);
+    font-weight: bold;
+
+    p {
+        text-wrap: nowrap;
+        text-decoration: underline;
+        text-align: center;
+    }
+}
+
+.handSelected {
+    filter: invert(1);
+}
+
+.handProbability:hover {
+    cursor: pointer;
+    border-width: 4px;
+}
+
+.probabilityValue {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+img {
+    width: 100%;
+}
+
+.probabilitiesBasic {
+    margin: 1% 0;
+    padding: 1% 2%;
+    border: 2px solid rgb(40, 20, 50);
+    border-radius: 8px;
+}
+
+.probabilitiesHands {
+    margin: 1% 0;
+    padding: 1% 2%;
+    border: 2px solid rgb(40, 20, 50);
+    border-radius: 8px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    h3 {
+        flex: 1 100%;
+    }
+}
+
+.probabilityHand {
+    padding: 1% 2%;
+    flex: 1 0 calc(100% * (1 / 2) - 2%);
+    border: 2px solid rgb(40, 20, 50);
+    border-radius: 8px;
+    min-height: 8rem;
+
+    h4 {
+        text-wrap: nowrap;
+        text-decoration: underline;
+        text-align: center;
+    }
+}
+
+footer {
+    text-align: center;
+    text-wrap: balance;
+}

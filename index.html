@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Five Card Slots</title>
+        <link rel="stylesheet" href="./css/modern-normalize.css">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Five Card Slots</h1>
+            <nav>
+                <ul>
+                    <li><a href="./pages/how-to-play.html" target="_self">How to Play</a></li>
+                    <li><a href="./pages/explain-odds.html" target="_self">Explain Odds</a></li>
+                    <li><a href="https://www.ncpgambling.org/help-treatment/" target="_self">Get Help</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="dispayMessages">
+                <p class="displayMessage" id="displayWin">Win or Lose</p>
+                <p class="displayMessage" id="displayHand">Your hand</p>
+            </section>
+            <section class="cards">
+                <div class="card" id="cardOne">
+                    <span class="cardSuit">&spades;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&hearts;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardValue">I</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&diams;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&clubs;</span>
+                </div>
+                <div class="card" id="cardTwo">
+                    <span class="cardSuit">&spades;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&hearts;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardValue">II</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&diams;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&clubs;</span>
+                </div>
+                <div class="card" id="cardThree">
+                    <span class="cardSuit">&spades;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&hearts;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardValue">III</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&diams;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&clubs;</span>
+                </div>
+                <div class="card" id="cardFour">
+                    <span class="cardSuit">&spades;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&hearts;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardValue">IV</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&diams;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&clubs;</span>
+                </div>
+                <div class="card" id="cardFive">
+                    <span class="cardSuit">&spades;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&hearts;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardValue">V</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&diams;</span>
+                    <span class="cardFiller"></span>
+                    <span class="cardSuit">&clubs;</span>
+                </div>
+            </section>
+
+            <section class="counters">
+                <div class="counter">
+                    <span class="counterName" id="nameProfit">Profit\Loss</span>
+                    <span class="counterValues">
+                        <span class="counterValue" id="valueProfit">0</span>
+                        <span class="counterSign">FunBux</span>
+                    </span>
+                </div>
+                <div class="counter">
+                    <span class="counterName">Bankroll</span>
+                    <span class="counterValues">
+                        <span class="counterValue" id="valueBankroll">100</span>
+                        <span class="counterSign">FunBux</span>
+                    </span>
+                </div>
+                <div class="counter">
+                    <span class="counterName">Bet</span>
+                    <span class="counterValues">
+                        <span class="counterValue" id="valueBet">0</span>
+                        <span class="counterSign">FunBux</span>
+                    </span>
+                </div>
+                <div class="counter">
+                    <span class="counterName">Payout</span>
+                    <span class="counterValues">
+                        <span class="counterValue" id="valuePayout">0</span>
+                        <span class="counterSign">FunBux</span>
+                    </span>
+                </div>
+                <div class="counter">
+                    <span class="counterName">Spin Count</span>
+                    <span class="counterValue" id="valueSpins">0</span>
+                </div>
+            </section>
+
+            <section class="buttons">
+                <div class="button" id="buttonPlus">Bet +5 FunBux</div>
+                <div class="button" id="buttonMinus">Bet -5 FunBux</div>
+                <div class="button" id="buttonSpin">Spin</div>
+            </section>
+
+            <section class="handProbabilities">
+                <div class="handProbability" id="handRoyalStraightFlush">
+                    <p clas="handName">Royal Straight Flush</p>
+                    <div class="probabilityValue">
+                        <span class="countName">Combinations</span>
+                        <span class="countValue">4</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="probabilityName">Probability</span>
+                        <span class="probabilityPercent">0.000154%</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="oddsName">Odds Against</span>
+                        <span class="oddsValue">
+                            <span>649,739</span>
+                            <span>:</span>
+                            <span>1</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="handProbability" id="handStraightFlush">
+                    <p>Straight Flush (excl. Royal)</p>
+                    <div class="probabilityValue">
+                        <span class="countName">Combinations</span>
+                        <span class="countValue">36</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="probabilityName">Probability</span>
+                        <span class="probabilityPercent">0.00139%</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="oddsName">Odds Against</span>
+                        <span class="oddsValue">
+                            <span>72,192</span>
+                            <span>:</span>
+                            <span>1</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="handProbability" id="handFourOfKind">
+                    <p>Four of a Kind</p>
+                    <div class="probabilityValue">
+                        <span class="countName">Combinations</span>
+                        <span class="countValue">624</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="probabilityName">Probability</span>
+                        <span class="probabilityPercent">0.0240%</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="oddsName">Odds Against</span>
+                        <span class="oddsValue">
+                            <span>4,164</span>
+                            <span>:</span>
+                            <span>1</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="handProbability" id="handFullHouse">
+                    <p>Full House</p>
+                    <div class="probabilityValue">
+                        <span class="countName">Combinations</span>
+                        <span class="countValue">3,744</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="probabilityName">Probability</span>
+                        <span class="probabilityPercent">0.144%</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="oddsName">Odds Against</span>
+                        <span class="oddsValue">
+                            <span>693</span>
+                            <span>:</span>
+                            <span>1</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="handProbability" id="handFlush">
+                    <p>Flush (excl. straight flush)</p>
+                    <div class="probabilityValue">
+                        <span class="countName">Combinations</span>
+                        <span class="countValue">5,108</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="probabilityName">Probability</span>
+                        <span class="probabilityPercent">0.197%</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="oddsName">Odds Against</span>
+                        <span class="oddsValue">
+                            <span>508</span>
+                            <span>:</span>
+                            <span>1</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="handProbability" id="handStraight">
+                    <p>Straight (excl. straight flush)</p>
+                    <div class="probabilityValue">
+                        <span class="countName">Combinations</span>
+                        <span class="countValue">10,200</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="probabilityName">Probability</span>
+                        <span class="probabilityPercent">0.392%</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="oddsName">Odds Against</span>
+                        <span class="oddsValue">
+                            <span>254</span>
+                            <span>:</span>
+                            <span>1</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="handProbability" id="handThreeOfKind">
+                    <p>Three of a Kind</p>
+                    <div class="probabilityValue">
+                        <span class="countName">Combinations</span>
+                        <span class="countValue">54,912</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="probabilityName">Probability</span>
+                        <span class="probabilityPercent">2.11%</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="oddsName">Odds Against</span>
+                        <span class="oddsValue">
+                            <span>46.3</span>
+                            <span>:</span>
+                            <span>1</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="handProbability" id="handTwoPair">
+                    <p>Two Pair</p>
+                    <div class="probabilityValue">
+                        <span class="countName">Combinations</span>
+                        <span class="countValue">123,552</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="probabilityName">Probability</span>
+                        <span class="probabilityPercent">4.75%</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="oddsName">Odds Against</span>
+                        <span class="oddsValue">
+                            <span>20</span>
+                            <span>:</span>
+                            <span>1</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="handProbability" id="handOnePair">
+                    <p>One Pair</p>
+                    <div class="probabilityValue">
+                        <span class="countName">Combinations</span>
+                        <span class="countValue">1,098,240</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="probabilityName">Probability</span>
+                        <span class="probabilityPercent">42.26%</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="oddsName">Odds Against</span>
+                        <span class="oddsValue">
+                            <span>1.37</span>
+                            <span>:</span>
+                            <span>1</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="handProbability handSelected" id="handHighCard">
+                    <p>High Card (No Pair)</p>
+                    <div class="probabilityValue">
+                        <span class="countName">Combinations</span>
+                        <span class="countValue">1,302,540</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="probabilityName">Probability</span>
+                        <span class="probabilityPercent">50.12%</span>
+                    </div>
+                    <div class="probabilityValue">
+                        <span class="oddsName">Odds Against</span>
+                        <span class="oddsValue">
+                            <span>0.995</span>
+                            <span>:</span>
+                            <span>1</span>
+                        </span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                If you or someone you know needs support, confidential help is available 24/7 through the National
+                Council on Problem Gambling helpline by calling or texting <a
+                    href="tel:+18005224700">1-800-522-4700</a>.
+            </p>
+        </footer>
+
+        <script src="./js/main.js"></script>
+    </body>
+
+</html>
