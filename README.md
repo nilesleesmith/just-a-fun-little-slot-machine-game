@@ -1,78 +1,84 @@
 # Five Card Slots
 
-This is a learning project and is not intended to be a real gambling application.
+A browser-based learning project that combines the idea of a slot machine with five-card poker.
 
-Five Card Slots is a small browser game I created while learning web development.
+This project uses **fake game currency only** and is not intended to be a real gambling application.
 
-The game combines a slot machine idea with five-card poker. The player chooses a poker hand, places a bet using fake money called **FunBux**, and spins to generate five random cards.
+## About
 
-If the cards match the hand the player selected, they win a payout.
+The player chooses a poker hand, places a bet using fictional FunBux, and spins to generate five random cards.
 
-## Why I Made This
-
-I built this project to practice:
-
-- HTML
-- CSS
-- JavaScript
-- DOM manipulation
-- Random number generation
-- Basic game logic
-- Working with poker odds and probability
-
-This started as a simple slot machine project and became a way for me to practice writing more JavaScript.
+The application compares the generated cards with the player's chosen poker hand and determines whether the player wins.
 
 ## How to Play
 
-1. Choose how much FunBux you want to bet.
+1. Choose a FunBux bet.
 2. Choose a poker hand.
-3. Click **Spin**.
+3. Start the spin.
 4. Five cards are generated.
-5. If the cards match your selected hand, you win FunBux.
+5. The game checks the resulting hand.
+6. Matching hands receive the appropriate fictional payout.
 
-The game uses fake money only. No real money is involved.
+## What I Practiced
 
-## Poker Hands
+- JavaScript
+- DOM manipulation
+- Event handling
+- Random number generation
+- Conditional logic
+- Arrays
+- Functions
+- Game state
+- Poker-hand logic
+- Probability concepts
 
-You can bet on hands such as:
+## Technologies
 
-- Royal Straight Flush
-- Straight Flush
-- Four of a Kind
-- Full House
-- Flush
-- Straight
-- Three of a Kind
-- Two Pair
-- One Pair
-- High Card
-
-## Built With
-
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 
-No frameworks or backend are used.
+## Purpose
 
-## What I Learned
+This started as a simple programming exercise and became a larger opportunity to practice JavaScript application logic.
 
-This project helped me practice breaking a larger problem into smaller pieces.
+The emphasis is on learning and experimentation rather than gambling.
 
-Some of the things I worked on were:
+## Gambling Disclaimer
 
-- Generating random playing cards
-- Preventing duplicate cards
-- Checking different poker hands
-- Updating the page with JavaScript
-- Keeping track of bets and winnings
-- Learning how poker probabilities work
+This project is a programming exercise created for educational and entertainment purposes only.
 
-There are still areas of the code I would like to improve as I continue learning.
+It does **not** involve real money, real gambling, cash prizes, deposits, withdrawals, or anything of monetary value. Any currency, bets, winnings, losses, or payouts shown in the game are fictional and exist only inside the application.
 
-## Run the Project
+The project is intended to demonstrate programming concepts such as JavaScript logic, randomization, game state, probability, conditional statements, and user interaction.
 
-Clone the repository:
+It should not be used as a gambling platform or as encouragement to gamble with real money.
 
-```bash
-git clone https://github.com/nilesleesmith/just-a-fun-little-slot-machine-game.git
+## Gambling Help
+
+Gambling can become harmful when it begins affecting your finances, relationships, work, school, or well-being.
+
+If gambling is causing problems for you or someone you know, support is available.
+
+### United States
+
+**Gamblers Anonymous**
+
+Gamblers Anonymous offers in-person, virtual, and telephone meetings for people who want help with a gambling problem.
+
+National Hotline:
+
+**855-222-5542**
+
+### Practical Safety Steps
+
+- Stop depositing additional money into gambling accounts.
+- Avoid trying to recover previous losses by gambling more.
+- Set limits or block access to gambling services.
+- Ask a trusted person to help manage access to money temporarily.
+- Contact your bank or gambling provider about available gambling-blocking tools.
+- Seek support from a qualified counselor or gambling-support organization.
+
+### Emergency Situations
+
+If gambling-related distress is creating an immediate risk of harm to yourself or someone else, contact your local emergency service or crisis-support service immediately.
