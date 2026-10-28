@@ -1,48 +1,67 @@
 # Five Card Slots
 
-A browser-based learning project that combines the idea of a slot machine with five-card poker.
+A browser-based five-card game that combines poker-hand probabilities with a slot-machine-style interface using fictional FunBux.
 
-This project uses **fake game currency only** and is not intended to be a real gambling application.
+## Overview
 
-## About
+Five Card Slots lets a player choose a target poker hand, set a fictional FunBux bet, and generate a random five-card hand.
 
-The player chooses a poker hand, places a bet using fictional FunBux, and spins to generate five random cards.
+The application compares the generated cards with the selected hand, calculates the fictional payout from the displayed odds, and tracks bankroll, profit or loss, payout, and spin count across rounds.
 
-The application compares the generated cards with the player's chosen poker hand and determines whether the player wins.
+## Features
 
-## How to Play
-
-1. Choose a FunBux bet.
-2. Choose a poker hand.
-3. Start the spin.
-4. Five cards are generated.
-5. The game checks the resulting hand.
-6. Matching hands receive the appropriate fictional payout.
-
-## What I Practiced
-
-- JavaScript
-- DOM manipulation
-- Event handling
-- Random number generation
-- Conditional logic
-- Arrays
-- Functions
-- Game state
-- Poker-hand logic
-- Probability concepts
+- Select a target poker hand
+- Increase or decrease a fictional FunBux bet
+- Generate five unique random cards
+- Check generated cards against poker-hand patterns
+- Calculate fictional payouts from displayed odds
+- Track bankroll, profit or loss, payout, and spin count
+- Display poker-hand combinations, probabilities, and odds
+- Separate How to Play and Explain Odds pages
 
 ## Technologies
 
-- HTML5
-- CSS3
-- JavaScript
+<p>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" title="HTML">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" width="40" height="40">
+  </a>
+  &nbsp;
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" title="CSS">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" width="40" height="40">
+  </a>
+  &nbsp;
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" title="JavaScript">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" height="40">
+  </a>
+</p>
 
-## Purpose
+## How to Run
 
-This started as a simple programming exercise and became a larger opportunity to practice JavaScript application logic.
+1. Clone the repository:
 
-The emphasis is on learning and experimentation rather than gambling.
+```bash
+git clone https://github.com/nilesleesmith/just-a-fun-little-slot-machine-game.git
+```
+
+2. Open the project folder.
+
+3. Open `index.html` in a web browser.
+
+No additional packages or build steps are required.
+
+## Game Currency
+
+The game uses fictional FunBux only. It does not accept deposits, withdrawals, cash prizes, or anything of monetary value.
+
+The interface also includes a link to gambling-support resources.
+
+## Live Site
+
+https://nilesleesmith.github.io/just-a-fun-little-slot-machine-game/
+
+## Screenshots
+
+![Five Card Slots desktop view](./assets/images/screenshots/just-a-fun-little-slot-machine-game-desktop.png)
 
 ## Gambling Disclaimer
 
